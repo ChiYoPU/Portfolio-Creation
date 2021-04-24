@@ -17,3 +17,7 @@ ver router = new VueRouter({
         }
     ]
 })
+
+ver app = new Vue({
+    router:router
+}).$mount('#app')
