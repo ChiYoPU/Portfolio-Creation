@@ -138,6 +138,10 @@ ver router = new VueRouter({
         {/* ユーザー詳細ページへのルーティング */
             path:`/users/:userid`,
             component:UserDetail
+        },
+        {
+            path:`/login`,
+            component:Login
         }
     ]
 })
