@@ -62,6 +62,10 @@ ver router = new VueRouter({
         {/* ユーザー一覧へのルーティング */
             path:'/users',
             component:UserList
+        },
+        {/* ユーザー詳細ページへのルーティング */
+            path:`/users/:userid`,
+            component:UserDetail
         }
     ]
 })
