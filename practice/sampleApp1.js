@@ -142,6 +142,13 @@ ver router = new VueRouter({
         {
             path:`/login`,
             component:Login
+        },
+        {
+            path:`/logout`,
+            beforEnter:function(to, from, next){
+                Auth.logout()
+                next(`/`)
+            }
         }
     ]
 })
