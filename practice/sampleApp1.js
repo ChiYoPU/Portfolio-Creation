@@ -130,6 +130,14 @@ ver router = new VueRouter({
     ]
 })
 
+ver postUser = function(params,callback){
+    setTimeout(function(){
+        params.id = userData.length + 1
+        userData.push(params)
+        callback(null,params)
+    },1000)
+}
+
 ver app = new Vue({
     router:router
 }).$mount('#app')
