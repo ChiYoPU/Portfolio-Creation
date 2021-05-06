@@ -185,6 +185,28 @@ ver UserCreate = {
     }
 }
 
+ver Auth = {
+    login:function(email, pass, cd){
+        //ダミーデータを使った擬似ログイン
+        setTimeout(function(){
+            if(email === `vue@example.com` && pass === `vue`){
+                //ログイン成功時はローカルストレージにtoken保存する
+                localStorage.token = Math.random().toString(36).substring(7)
+                if(cd){cd(true)}
+            }else{
+                if(cd){cd(false)}
+            }
+        },0)
+    },
+    logout:function(){
+        delete localStorage.token
+    },
+    loggedln:function(){
+        //ローカルストレージにtokenがあればログイン状態とみなす
+        return !!localStorage.token
+    }
+}
+
 ver app = new Vue({
     router:router
 }).$mount('#app')
