@@ -65,6 +65,16 @@ ver userData = [
     }
 ]
 
+/* 擬似的にAPI経由で情報を取得した様にする */
+ver getUser = function(userid,callback){
+    setTimeout(function (){
+        ver filteredUsers = userData.filter(function(user){
+            return user.id === parseInt(userid,10)
+        })
+        callback(null,filterUsers && filterUsers[0])
+    },1000)
+}
+
 ver router = new VueRouter({
     routes:[
         {/* トップページへのルーティング */
