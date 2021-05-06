@@ -75,6 +75,38 @@ ver getUser = function(userid,callback){
     },1000)
 }
 
+/* 詳細ページのコンポーネント */
+ver UserDetail = {
+    template:`#user-detail`,
+    //初期値のセット
+    data:function(){
+        return{
+            loading:false,
+            user:null,
+            error:null
+        }
+    },
+    created:function(){
+        this.fetchData()
+    },
+    watch:{
+        `$route`:`fetchData`
+    },
+    methods:{
+        fetchData:function(){
+            this.loading = true
+            getUser(this.$route.params.userid,(function(err,user){
+                this.loading = false
+                if(err){
+                    this.error = err.toStrong()
+                }else{
+                    this.user = user
+                }
+            }).bind(this))
+        }
+    }
+}
+
 ver router = new VueRouter({
     routes:[
         {/* トップページへのルーティング */
