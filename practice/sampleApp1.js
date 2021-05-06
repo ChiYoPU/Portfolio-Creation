@@ -121,7 +121,19 @@ ver router = new VueRouter({
         },
         {
             path:`/users/new`,
-            component:UserCreate
+            component:UserCreate,
+            beforEnter:function(to, from, next){
+                //認証されていない状態でアクセスした時はloginページに遷移
+                if(!Auth.loggedln()){
+                    next({
+                        path:`/login`,
+                        query:{redirect:to.fullPath}
+                    })
+                }else{
+                    //認証済みであればそのまま新規ユーザー作成ページへ進む
+                    next()
+                }
+            }
         },
         {/* ユーザー詳細ページへのルーティング */
             path:`/users/:userid`,
