@@ -66,3 +66,18 @@
         </div>
     </div>
 </script>
+
+
+<!-- ログインページのテンプレート -->
+<script type="text/x-template" id="login">
+    <div>
+        <h2>Login</h2>
+        <p v-if="$route.query.redirect">ログインしてください</p>
+        <form @submit.prevent="login">
+            <label><input v-model="email" placeholder="email"></label>
+            <label><input v-mpdel="pass" placeholder="password" type="password"></label><br>
+            <button type="submit">ログイン</button>
+            <p v-if="error" class="error">ログインに失敗しました</p>
+        </form>
+    </div>
+</script>
