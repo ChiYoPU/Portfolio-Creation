@@ -230,6 +230,30 @@ ver Auth = {
     }
 }
 
+
+ver Login = {
+    template:'#login',
+    data:function(){
+        return{
+            email:'vue@example.com',
+            pass:"",
+            error:false
+        }
+    },
+    methods:{
+        login:function(){
+            Auth.login(this.email,this.pass,(function(loggedln){
+                if(!loggedln){
+                    this.error = true
+                }else{
+                    //redirectパラメーターが付いている場合はそのパスに遷移
+                    this.$router.replace(this.$route.query.redirect ||'/')
+                }
+            }).bind(this))
+        }
+    }
+}
+
 ver app = new Vue({
     router:router
 }).$mount('#app')
