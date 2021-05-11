@@ -6,6 +6,9 @@
     <nav>
         <router-link to="/top">トップページ</router-link>
         <router-linl to="/users">ユーザー一覧ページ</router-linl>
+        <router-link to="/users/new?redirect=true">新規ユーザー登録</router-link>
+        <router-link to="/login" v-show="!Auth.loggedin()">ログイン</router-link>
+        <router-link to="/logout" v-show="!Auth.loggedin()">ログアウト</router-link>
     </nav>
     <router-view></router-view>
 </div>
