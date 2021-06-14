@@ -85,3 +85,7 @@ Webサーバ：AWSのAmazonEC2
 
 ## 4-6 アクセス解析
 GoogleAnalytics
+
+
+**参考**
+https://web-kanji.com/posts/prepare-rfp
