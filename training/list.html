@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="JP">
+
+<head>
+    <meta charset="UTF-8">
+    <title>リスト表示を練習</title>
+</head>
+
+<body>
+    <div id="listn">
+        <ul>
+            <li v-for="friend in friends"> {{ friend }} </li>
+        </ul>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+
+<script>
+    let listn = new Vue({
+        el: '#listn',
+        data: {
+            friends: ["ルーロー飯","タコス","サンドイッチ","おでん","ペペロンチーノ"]
+        }
+    })
+</script>
+</body>
+</html>
