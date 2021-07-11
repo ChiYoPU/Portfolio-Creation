@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="jp">
-    <head>
-        <meta charset="UTF-8">
-        <title>属性へのバインド</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>属性へのバインド</title>
+</head>
 
-    <body>
-        <h1 id="app">
-            <a v-bind: href="google">検索エンジン</a>
-        </h1>
+<body>
+    <h1 id="app">
+        <a v-bind: href="google">検索エンジン</a>
+    </h1>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
 
-    <script>
-        let app = new Vue({
-            el: '#app',
-            data: {
-                google: 'https://google.com'
-            }
-        })
-    </script>
-    </body>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            google: 'https://google.com'
+        }
+    })
+</script>
+</body>
 </html>
