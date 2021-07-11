@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-ifで切り替え表示を実装</title>
+</head>
+
+<body>
+    <div id="ifu">
+        <p v-if="stock_number > 0">　販売中です　</p>
+        <p v-else>　在庫切れのため販売しておりません　</p>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+
+<script>
+    let ifu = new Vue({
+        el: '#ifu'
+        data: {
+            stock_number: 0
+        }
+    })
+</script>
+</body>
+
+</html>
