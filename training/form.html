@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="JP">
+
+<head>
+    <meta charset="UTF-8">
+    <title>入力フォーム</title>
+</head>
+
+<body>
+    <div id="form">
+        <input type="text" v-model="textInput">
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+
+<script>
+    let form = new Vue({
+        el: '#form',
+        data:{
+            textInput: '',
+        }
+    })
+</script>
+</body>
+</html>
