@@ -9,3 +9,6 @@ Atomic Designを元に、必要となるコンポーネントの洗い出しを�
 背景 | Atoms | kbnBackground
 ログインフォーム | Molecules | kbnLoginForm
 ポストフォーム | Molecules | kbnPostForm
+ポストカードフォーム | Molecules | kbnPostCardForm
+メニュー | Molecules | kbnMenu
+News | Molecules | kbnNews
