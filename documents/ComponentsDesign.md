@@ -6,3 +6,4 @@ Atomic Designを元に、必要となるコンポーネントの洗い出しを�
 テキストボックス | Atoms | ―
 ボタン | Atoms | kbnButton
 アイコン | Atoms | kbnIcon
+背景 | Atoms | kbnBackground
