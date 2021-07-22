@@ -12,3 +12,4 @@ Atomic Designを元に、必要となるコンポーネントの洗い出しを�
 ポストカードフォーム | Molecules | kbnPostCardForm
 メニュー | Molecules | kbnMenu
 News | Molecules | kbnNews
+Description | Molecules | kbnDescription
