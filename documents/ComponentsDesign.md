@@ -16,5 +16,12 @@ Atomic Designを元に、必要となるコンポーネントの洗い出しを�
 導入 | Organisms | kbnIntroduction
 メニュー一覧 | Organisms | kbnMenuList
 つぶやき一覧 | Organisms | kbnPostList
-お知らせ一覧 | Organisms | kbnNewstList
+お知らせ一覧 | Organisms | kbnNewsList
 設定一覧 | Organisms | kbnSetting
+導入ビュー | Templates | kbnIntroductionView
+ログインビュー | Templates | kbnLoginView
+投稿ビュー | Templates | kbnPostView
+投稿一覧ビュー | Templates | kbnPostListView
+お知らせビュー | Templates | kbnNewsListView
+設定ビュー | Templates | kbnSettingView
+空ビュー | Templates | kbnEmptyView
