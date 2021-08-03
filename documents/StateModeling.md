@@ -9,3 +9,6 @@
 
 **画面遷移図**  
 ![スクリーンショット 2021-07-28 23 05 26](https://user-images.githubusercontent.com/75874607/127336306-71b5ba12-bc2e-4175-a7dd-17d7c292329f.png)
+
+それぞれの画面に必要となりそうな情報は、以下のようになると考える
+![スクリーンショット 2021-08-03 22 14 53](https://user-images.githubusercontent.com/75874607/128021815-31484a0e-8f53-42ad-beb4-8f77d4d209e2.png)
