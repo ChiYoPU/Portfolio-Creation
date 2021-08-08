@@ -7,7 +7,9 @@
 
 <body>
     <div id="app">
-        <input type="checkbox" v-model="selectValue">
+        <input type="checkbox" v-model="selectValue" value="うどん">
+        <input type="checkbox" v-model="selectValue" value="そば">
+        <input type="checkbox" v-model="selectValue" value="ラーメン">
         <p>{{ selectValue }}</p>
     </div>
 
@@ -18,7 +20,7 @@
     let app = new Vue({
         el:'#app',
         data:{
-            selectValue: true,
+            selectValue: [],
         }
     })
 </script>
