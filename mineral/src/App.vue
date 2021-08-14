@@ -30,3 +30,14 @@
   color: #42b983;
 }
 </style>
+
+
+<script>
+import backGround from './components/KbnBackGround.vue'
+
+export default {
+  components:{
+    backGround,
+  }
+}
+</script>
