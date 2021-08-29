@@ -27,5 +27,8 @@ export default {
 </script>
 
 <style scoped>
-
+.description{
+    background-color: #F9F7F7;
+    border-radius: 15%;
+}
 </style>
