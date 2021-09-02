@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import Button from "/kbnButton";
+
 export default {
     data(){
         return{
