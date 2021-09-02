@@ -1,13 +1,13 @@
 <template>
     <div class="description">
         <img src="../assets/logo.png">
-        <p class="bigContent">{{ Message1 }}</p>
-        <p class="bigContent">{{ Message2 }}</p>>
-        <p class="bigContent">{{ Message3 }}</p>
+        <p class="content bigContent">{{ Message1 }}</p>
+        <p class="content bigContent">{{ Message2 }}</p>>
+        <p class="content bigContent">{{ Message3 }}</p>
 
-        <p class="minContent">{{ Message4 }}</p>
-        <p class="minContent">{{ Message5 }}</p>
-        <p class="minContent">{{ Message6 }}</p>
+        <p class="content minContent">{{ Message4 }}</p>
+        <p class="content minContent">{{ Message5 }}</p>
+        <p class="content minContent">{{ Message6 }}</p>
     </div>
 </template>
 
