@@ -8,6 +8,10 @@
         <p class="content minContent">{{ Message4 }}</p>
         <p class="content minContent">{{ Message5 }}</p>
         <p class="content minContent">{{ Message6 }}</p>
+
+        <div class="button">
+            <Button />
+        </div>
     </div>
 </template>
 
