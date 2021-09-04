@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button type="button">{{ button }}</button>
+        <button type="button">{{ buttonTitle }}</button>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     data(){
         return{
-            button: "Sign in"
+            props: ['buttonTitle']
         }
     }
 }
