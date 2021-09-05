@@ -16,15 +16,8 @@
 </template>
 
 <script>
-import Button from "/kbnButton";
-export default{
-    name: "button",
-    components: {
-        Button,
-    },
-};
-
 export default {
+    name: "description",
     data(){
         return{
             Message1: "Twitterに上げる程じゃないけどつぶやきたい",
@@ -33,9 +26,17 @@ export default {
             Message4: "そんな思いを叶えます",
             Message5: "つぶやいた内容は他の人から見られなくて安心！",
             Message6: "架空のいいねとコメントが付くひとりごとアプリです"
-        }
-    }
-}
+        },
+    },
+};
+
+import Button from "/kbnButton";
+export default{
+    name: "button",
+    components: {
+        Button,
+    },
+};
 </script>
 
 <style scoped>
