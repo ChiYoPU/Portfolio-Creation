@@ -10,13 +10,19 @@
         <p class="content minContent">{{ Message6 }}</p>
 
         <div class="button">
-            <Button />
+            <Button buttonTitle="アカウントを作成する"/>
         </div>
     </div>
 </template>
 
 <script>
 import Button from "/kbnButton";
+export default{
+    name: "button",
+    components: {
+        Button,
+    },
+};
 
 export default {
     data(){
