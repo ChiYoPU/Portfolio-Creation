@@ -8,12 +8,8 @@
 <script>
 export default {
     name: "Button",
-    data(){
-        return{
-            props: ['buttonTitle']
-        }
-    }
-}
+    props: ["buttonTitle"],
+};
 </script>
 
 
