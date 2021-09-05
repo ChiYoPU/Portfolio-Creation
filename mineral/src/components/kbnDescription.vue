@@ -26,8 +26,8 @@ export default {
             Message4: "そんな思いを叶えます",
             Message5: "つぶやいた内容は他の人から見られなくて安心！",
             Message6: "架空のいいねとコメントが付くひとりごとアプリです"
-        },
-    },
+        }
+    }
 };
 
 import Button from "/kbnButton";
