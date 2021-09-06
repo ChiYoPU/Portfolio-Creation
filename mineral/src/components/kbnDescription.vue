@@ -30,7 +30,7 @@ export default {
     }
 };
 
-import Button from "/kbnButton";
+import Button from "kbnButton.vue";
 export default{
     name: "button",
     components: {
