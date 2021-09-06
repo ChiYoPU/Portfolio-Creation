@@ -5,8 +5,13 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Description />
   </div>
 </template>
+
+<script>
+import  Description from "components/kbnDescription.vue";
+</script>
 
 <style>
 #app {
