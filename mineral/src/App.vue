@@ -5,12 +5,22 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+
+    <div class="description">
     <Description />
+    </div>
   </div>
 </template>
 
+
 <script>
-import  Description from "components/kbnDescription.vue";
+import  Description from "./components/kbnDescription.vue";
+export default {
+    name: "description",
+    components: {
+      Description,
+  },
+};
 </script>
 
 <style>
