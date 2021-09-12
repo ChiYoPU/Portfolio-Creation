@@ -1,13 +1,7 @@
 <template>
-    <div class="description">
+    <div id="app">
         <img src="../assets/logo.png">
-        <p class="content bigContent">{{ Message1 }}</p>
-        <p class="content bigContent">{{ Message2 }}</p>>
-        <p class="content bigContent">{{ Message3 }}</p>
-
-        <p class="content minContent">{{ Message4 }}</p>
-        <p class="content minContent">{{ Message5 }}</p>
-        <p class="content minContent">{{ Message6 }}</p>
+        <description></description>
 
         <div class="button">
             <Button buttonTitle="アカウントを作成する"/>
@@ -16,19 +10,17 @@
 </template>
 
 <script>
-export default {
-    name: "description",
-    data(){
-        return{
-            Message1: "Twitterに上げる程じゃないけどつぶやきたい",
-            Message2: "ひとつも反応がないのは流石にさびしい・・・",
-            Message3: "一回でいいからバズりを体験してみたい",
-            Message4: "そんな思いを叶えます",
-            Message5: "つぶやいた内容は他の人から見られなくて安心！",
-            Message6: "架空のいいねとコメントが付くひとりごとアプリです"
+var app = new Vue({
+    el: '#app',
+    data: {
+
+    },
+    components:{
+        'description':{
+            template: '<div><p>Twitterに上げる程じゃないけどつぶやきたい</p><p>ひとつも反応がないのは流石にさびしい</p><p>一回でいいからバズりを体験してみたい</p><p>そんな思いを叶えます</p><p>つぶやいた内容は他の人から見られなくて安心！</p><p>架空のいいねとコメントが付くひとりごとアプリです</p></div>'
         }
-    }
-};
+    },
+})
 
 import Button from "kbnButton.vue";
 export default{
