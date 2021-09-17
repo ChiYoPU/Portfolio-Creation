@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>コンポーネントの練習</title>
+</head>
+
+<body>
+    <div id='abc'>
+        <desk></desk>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+
+<script>
+let abc = new Vue({
+    el: '#abc',
+    data: {
+
+    },
+    components:{
+        'desk':{
+            template: '<div><p>Twitterに上げる程じゃないけどつぶやきたい</p><p>ああああああ</p></div>'
+        }
+    },
+})
+</script>
+</body>
+</html>
