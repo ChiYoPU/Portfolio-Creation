@@ -2,29 +2,37 @@
 <html lang="jp">
 <head>
     <meta charset="UTF-8">
-    <title>コンポーネントの練習</title>
+    <title>テキストの練習</title>
 </head>
 
 <body>
-    <div id='abc'>
-        <desk></desk>
+    <div id="app">
+        <p>{{ abc }}</p>
+        <a :href="url">検索</a>
+        <input type="button" value="CLICK" v-bind:disabled="flag" />
+        <button v-on:click="onclick">日付を表示</button>
+        <p>{{ time }}</p>
     </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
 </script>
 
 <script>
-let abc = new Vue({
-    el: '#abc',
-    data: {
-
-    },
-    components:{
-        'desk':{
-            template: '<div><p>Twitterに上げる程じゃないけどつぶやきたい</p><p>ああああああ</p></div>'
+    let app = new Vue({
+        el: '#app',
+        data: {
+            abc: 'aaaaaaaaa',
+            url: 'https://google.com',
+            flag: false,
+            time: ''
+        },
+        methods: {
+            onclick: function(){
+                this.time = new Date().toDateString();
+            }
         }
-    },
-})
+    })
 </script>
 </body>
 </html>
