@@ -7,11 +7,11 @@
 
 <body>
     <div id="app">
-        <p>{{ abc }}</p>
-        <a :href="url">検索</a>
-        <input type="button" value="CLICK" v-bind:disabled="flag" />
-        <button v-on:click="onclick">日付を表示</button>
-        <p>{{ time }}</p>
+        <p>{{ abc1 }}</p>
+        <a :href="url2">検索</a>
+        <input type="button" value="CLICK" v-bind:disabled="flag3" />
+        <button v-on:click="onclick4">日付を表示</button>
+        <p>{{ time5 }}</p>
     </div>
 
 
@@ -22,13 +22,13 @@
     let app = new Vue({
         el: '#app',
         data: {
-            abc: 'aaaaaaaaa',
-            url: 'https://google.com',
-            flag: false,
-            time: ''
+            abc1: 'aaaaaaaaa',
+            url2: 'https://google.com',
+            flag3: false,
+            time5: ''
         },
         methods: {
-            onclick: function(){
+            onclick4: function(){
                 this.time = new Date().toDateString();
             }
         }
