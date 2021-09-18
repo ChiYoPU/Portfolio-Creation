@@ -12,6 +12,11 @@
         <input type="button" value="CLICK" v-bind:disabled="flag3" />
         <button v-on:click="onclick4">日付を表示</button>
         <p>{{ time5 }}</p>
+        <form>
+            <label for="name">氏名：</label>
+            <input type="text" id="name" v-model="myName6" />
+        </form>
+        <p>こんにちは、{{ myName6 }}さん！！</p>
     </div>
 
 
@@ -25,7 +30,8 @@
             abc1: 'aaaaaaaaa',
             url2: 'https://google.com',
             flag3: false,
-            time5: ''
+            time5: '',
+            myName6: '名無し'
         },
         methods: {
             onclick4: function(){
