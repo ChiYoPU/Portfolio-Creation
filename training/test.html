@@ -17,6 +17,11 @@
             <input type="text" id="name" v-model="myName6" />
         </form>
         <p>こんにちは、{{ myName6 }}さん！！</p>
+        <form>
+            <label for="agree">同意する：</label>
+            <input type="checkbox" id="agree" v-model="agree"/>
+        </form>
+        <p>回答：{{ agree }}</p>
     </div>
 
 
@@ -31,7 +36,8 @@
             url2: 'https://google.com',
             flag3: false,
             time5: '',
-            myName6: '名無し'
+            myName6: '名無し',
+            agree: true
         },
         methods: {
             onclick4: function(){
