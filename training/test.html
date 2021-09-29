@@ -22,6 +22,10 @@
             <input type="checkbox" id="agree" v-model="agree"/>
         </form>
         <p>回答：{{ agree }}</p>
+        <form>
+            <label for="temp">サウナの温度：</label>
+            <input type="text" id="temper" v-model.number="temp" v-on:change="onchange"/>
+        </form>
     </div>
 
 
@@ -37,11 +41,15 @@
             flag3: false,
             time5: '',
             myName6: '名無し',
-            agree: true
+            agree: true,
+            temper: 0
         },
         methods: {
             onclick4: function(){
                 this.time = new Date().toDateString();
+            },
+            onchange: function(){
+                console.log(this.temper.toFixed(1));
             }
         }
     })
