@@ -26,6 +26,11 @@
             <label for="temp">サウナの温度：</label>
             <input type="text" id="temper" v-model.number="temp" v-on:change="onchange"/>
         </form>
+        <form>
+            <label for="name">氏名：</label>
+            <input type="text" id="name" v-model.lazy="MYNAME" />
+        </form>
+        <p>こんにちは、{{ MYNAME }}さん！！</p>
     </div>
 
 
@@ -42,7 +47,8 @@
             time5: '',
             myName6: '名無し',
             agree: true,
-            temper: 0
+            temper: 0,
+            MYNAME: '匿名'
         },
         methods: {
             onclick4: function(){
