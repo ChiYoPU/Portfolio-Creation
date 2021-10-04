@@ -58,6 +58,20 @@
         </div>
         <!-- v-ifに対してelseの場合 -->
         <div v-else>現在、非表示中です。</div>
+
+        <form>
+            <label for="holiday">祝日：</label><br />
+            <select id="holiday" v-model="holiday">
+                <option value="">祝日を選択してください。</option>
+                <option value="new">元日</option>
+                <option value="child">子供の日</option>
+                <option value="culture">文化の日</option>
+            </select>
+        </form>
+        <div v-else-if="holiday==='new">１月１日。年の初めを祝う。</div>
+        <div v-else-if="holiday==='child">５月５日。子供の成長を祝う。</div>
+        <div v-else-if="holiday==='culture">１１月３日。自由と平和と文化を祝う。</div>
+        <div v-else>何も選択されていません。</div>
     </div>
 
 
@@ -76,7 +90,8 @@
             agree: true,
             temper: 0,
             MYNAME: '匿名',
-            show: true
+            show: true,
+            holiday: ''
         },
         methods: {
             onclick4: function(){
