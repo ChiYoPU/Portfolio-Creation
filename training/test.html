@@ -69,9 +69,9 @@
                 <option value="culture">文化の日</option>
             </select>
         </form>
-        <div v-else-if="holiday==='new">１月１日。年の初めを祝う。</div>
-        <div v-else-if="holiday==='child">５月５日。子供の成長を祝う。</div>
-        <div v-else-if="holiday==='culture">１１月３日。自由と平和と文化を祝う。</div>
+        <div v-if="holiday==='new'">１月１日。年の初めを祝う。</div>
+        <div v-else-if="holiday==='child'">５月５日。子供の成長を祝う。</div>
+        <div v-else-if="holiday==='culture'">１１月３日。自由と平和と文化を祝う。</div>
         <div v-else>何も選択されていません。</div>
     </div>
 
