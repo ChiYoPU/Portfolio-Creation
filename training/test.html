@@ -73,6 +73,25 @@
         <div v-else-if="holiday==='child'">５月５日。子供の成長を祝う。</div>
         <div v-else-if="holiday==='culture'">１１月３日。自由と平和と文化を祝う。</div>
         <div v-else>何も選択されていません。</div>
+
+        <!-- 要素の再利用に対応 -->
+        <fieldset>
+            <legend>支払方法</legend>
+            クレジットカード：
+            <input type="radio" name="pay" value="credit" v-model="pay"/>
+            銀行振込：
+            <input type="radio" name="pay" value="bank" v-model="pay"/>
+            <hr />
+
+            <div v-if="pay==='credit'">
+                カード番号：
+                <input type="text" key="credit"/>
+            </div>
+            <div v-else-if="pay==='bank'">
+                口座番号：
+                <input type="text" key="bank">
+            </div>
+        </fieldset>
     </div>
 
 
@@ -92,7 +111,8 @@
             temper: 0,
             MYNAME: '匿名',
             show: true,
-            holiday: ''
+            holiday: '',
+            pay: 'credit'
         },
         methods: {
             onclick4: function(){
