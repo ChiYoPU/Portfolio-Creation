@@ -5,6 +5,9 @@
     <title>テキストの練習</title>
 </head>
 
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
 <body>
     <div id="app">
         <!-- 基本のバインド -->
@@ -92,6 +95,15 @@
                 <input type="text" key="bank">
             </div>
         </fieldset>
+
+        <!-- 配列を表示 -->
+        <table class="table">
+            <th>書名</th><th>価格</th>
+            <tr v-for="b in books">
+                <tb>{{ b.title }}</tb>
+                <tb>{{ b.price }}</tb>
+            </tr>
+        </table>
     </div>
 
 
@@ -112,7 +124,21 @@
             MYNAME: '匿名',
             show: true,
             holiday: '',
-            pay: 'credit'
+            pay: 'credit',
+            books: [
+                {
+                    title: 'ケーキのレシピ',
+                    price: 2800
+                },
+                {
+                    title: '肉料理のレシピ',
+                    price: 3000
+                },
+                {
+                    title: 'おつまみのレシピ',
+                    price: 1300
+                }
+            ]
         },
         methods: {
             onclick4: function(){
