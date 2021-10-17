@@ -96,14 +96,6 @@
             </div>
         </fieldset>
 
-        <!-- 配列を表示 -->
-        <table class="table">
-            <th>書名</th><th>価格</th>
-            <tr v-for="b in books">
-                <tb>{{ b.title }}</tb>
-                <tb>{{ b.price }}</tb>
-            </tr>
-        </table>
     </div>
 
 
@@ -125,20 +117,6 @@
             show: true,
             holiday: '',
             pay: 'credit',
-            books: [
-                {
-                    title: 'ケーキのレシピ',
-                    price: 2800
-                },
-                {
-                    title: '肉料理のレシピ',
-                    price: 3000
-                },
-                {
-                    title: 'おつまみのレシピ',
-                    price: 1300
-                }
-            ]
         },
         methods: {
             onclick4: function(){
