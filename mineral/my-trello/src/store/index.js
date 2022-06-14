@@ -10,7 +10,7 @@ const store = new Vuex.Store({
   state: {
     state: {
       //保存したリストがあれば取得し、ないときに表示されるデフォルトを定義
-  　  lists: savedLists ? JSON.parse(savedLists): [
+    lists: savedLists ? JSON.parse(savedLists): [
         {
           title: 'Backlog',
           cards: [
