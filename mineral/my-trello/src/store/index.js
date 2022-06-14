@@ -3,11 +3,13 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+//LocalStorageに保存したリストの取得
 const savedLists = localStorage.getItem('trello-lists')
 
 const store = new Vuex.Store({
   state: {
     state: {
+      //保存したリストがあれば取得し、ないときに表示されるデフォルトを定義
   　  lists: savedLists ? JSON.parse(savedLists): [
         {
           title: 'Backlog',
@@ -40,5 +42,11 @@ const store = new Vuex.Store({
   },
   getters: {
   }
+}})
+
+store.subscribe((mutation, state) => {
+  //LocalStorageにデータの更新をして、Jsonに変換して保存
+  localStorage.setItem('trello-lists', JSON.stringify(state.lists))
 })
+
 export default store
