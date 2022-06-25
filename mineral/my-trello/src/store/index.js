@@ -41,6 +41,9 @@ state: {
     removeCardFromList(state, payload) {
       state.lists[payload.listIndex].cards.splice(payload.cardIndex, 1)
     },
+    updateList(context, payload) {
+      state.lists = payload.lists
+    }
   },
   actions: {
     addlist(context, payload) {
@@ -52,9 +55,12 @@ state: {
     addCardToList(context, payload) {
       context.commit('addCardToList', payload)
     },
-    removeCardFromList(context, payload){
+    removeCardFromList(context, payload) {
       context.commit('removeCardFromList', payload)
     },
+    updateList(context, payload) {
+      context.commit('updateList', payload)
+    }
   },
   getters: {
     totalCardCount(state) {
